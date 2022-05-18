@@ -3,21 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-
-public class MainMenu : MonoBehaviour
+public class NewBehaviourScript : MonoBehaviour
 {
     [SerializeField] GameObject pauseMenu;
-
     // Start is called before the first frame update
-    public void ChangeScene(string sceneName)
-    {
-        SceneManager.LoadScene(sceneName);
-    }
-
-    public void ExitGame()
-    {
-        Application.Quit();
-    }
     public void Pause()
     {
         pauseMenu.SetActive(true);
@@ -28,10 +17,9 @@ public class MainMenu : MonoBehaviour
         pauseMenu.SetActive(false);
         Time.timeScale = 1f;
     }
-    public void Home(string sceneName)
+    public void Home(int sceneID)
     {
-        Time.timeScale = 1f;
-        SceneManager.LoadScene(sceneName);
-    }
+        SceneManager.LoadScene(sceneID);
 
+    }
 }

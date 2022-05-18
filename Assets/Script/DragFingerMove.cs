@@ -23,6 +23,7 @@ public class DragFingerMove : MonoBehaviour
             Touch touch = Input.GetTouch(0);
             touchPosition = Camera.main.ScreenToWorldPoint(touch.position);
             touchPosition.z = 0;
+            touchPosition.y = -4;
             direction = (touchPosition - transform.position);
             rb.velocity = new Vector2(direction.x, direction.y) * moveSpeed;
 

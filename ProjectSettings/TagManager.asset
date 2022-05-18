@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Organic
+  - Anorganic
   layers:
   - Default
   - TransparentFX
@@ -40,4 +42,16 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: BG
+    uniqueID: 1327711969
+    locked: 0
+  - name: Trash
+    uniqueID: 4153156165
+    locked: 0
+  - name: Bin
+    uniqueID: 3003972613
+    locked: 0
+  - name: Canvas
+    uniqueID: 2310909181
     locked: 0
