@@ -12,21 +12,24 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
+    path: Assets/Scenes/About.unity
+    guid: 27e5c01f64ebe684aa3ee1641261ca98
+  - enabled: 1
     path: Assets/Scenes/Extras.unity
     guid: f48bf59ec8f79d54d80475f632793b26
-  - enabled: 1
-    path: Assets/Scenes/Leveling.unity
-    guid: 948a4b52b1f3ec74f86c4b1ecbae2586
   - enabled: 1
     path: Assets/Scenes/Setting.unity
     guid: 7e22a16c33642d548bcc462be74ff533
   - enabled: 1
-    path: Assets/Scenes/About.unity
-    guid: 27e5c01f64ebe684aa3ee1641261ca98
+    path: Assets/Scenes/Leveling.unity
+    guid: 948a4b52b1f3ec74f86c4b1ecbae2586
+  - enabled: 1
+    path: Assets/Scenes/RubbishBin.unity
+    guid: ccf16ab70e7443d449bbd179a19b4c60
   - enabled: 1
     path: Assets/Scenes/Game1.unity
     guid: 2d886eb985249954ea8948096466839d
   - enabled: 1
-    path: Assets/Scenes/RubbishBin.unity
-    guid: ccf16ab70e7443d449bbd179a19b4c60
+    path: Assets/Scenes/Game2.unity
+    guid: b01819883e9aab144a5564f003ca5598
   m_configObjects: {}

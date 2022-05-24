@@ -19,6 +19,7 @@ public class NewBehaviourScript : MonoBehaviour
     }
     public void Home(int sceneID)
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene(sceneID);
 
     }

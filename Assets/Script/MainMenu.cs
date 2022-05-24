@@ -11,6 +11,7 @@ public class MainMenu : MonoBehaviour
     // Start is called before the first frame update
     public void ChangeScene(string sceneName)
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene(sceneName);
     }
 
@@ -32,6 +33,16 @@ public class MainMenu : MonoBehaviour
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene(sceneName);
+    }
+
+    public void Restart(){
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void NextLevel(string nextLevelScene){
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(nextLevelScene);
     }
 
 }

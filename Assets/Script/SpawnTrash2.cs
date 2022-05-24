@@ -1,16 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SpawnTrash2 : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject[] Trash;
+    [SerializeField] private GameObject[] Trash;
 
     private BoxCollider2D col;
 
     float x1, x2;
-
+    // public Countdown script;
     void Awake()
     {
         col = GetComponent<BoxCollider2D>();
@@ -30,10 +30,20 @@ public class SpawnTrash2 : MonoBehaviour
 
         Vector3 temp = transform.position;
         temp.x = Random.Range(x1, x2);
+        if (SceneManager.GetActiveScene().name == "Game1")
+        {
+            Instantiate(Trash[Random.Range(0, Trash.Length)], temp, Quaternion.identity);
 
-        Instantiate(Trash[Random.Range(0, Trash.Length)], temp, Quaternion.identity);
+        
+            StartCoroutine(SpawnTrash(Random.Range(1.5f, 2f)));
+        } else if (SceneManager.GetActiveScene().name == "Game2")
+        {
+            Instantiate(Trash[Random.Range(0, Trash.Length)], temp, Quaternion.identity);
 
-        StartCoroutine(SpawnTrash(Random.Range(1f, 2f)));
+        
+            StartCoroutine(SpawnTrash(Random.Range(1f, 1.5f)));
+        }
+        
     }
 
 }
