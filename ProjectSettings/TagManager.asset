@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Organic
   - Anorganic
+  - Bonus
   layers:
   - Default
   - TransparentFX

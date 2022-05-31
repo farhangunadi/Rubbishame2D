@@ -30,18 +30,18 @@ public class SpawnTrash2 : MonoBehaviour
 
         Vector3 temp = transform.position;
         temp.x = Random.Range(x1, x2);
-        if (SceneManager.GetActiveScene().name == "Game1")
+        if (SceneManager.GetActiveScene().name == "Game1" || SceneManager.GetActiveScene().name == "Game3")
         {
             Instantiate(Trash[Random.Range(0, Trash.Length)], temp, Quaternion.identity);
 
         
             StartCoroutine(SpawnTrash(Random.Range(1.5f, 2f)));
-        } else if (SceneManager.GetActiveScene().name == "Game2")
+        } else if (SceneManager.GetActiveScene().name == "Game2" || SceneManager.GetActiveScene().name == "Game4")
         {
             Instantiate(Trash[Random.Range(0, Trash.Length)], temp, Quaternion.identity);
 
         
-            StartCoroutine(SpawnTrash(Random.Range(1f, 1.5f)));
+            StartCoroutine(SpawnTrash(Random.Range(1.2f, 1.4f)));
         }
         
     }

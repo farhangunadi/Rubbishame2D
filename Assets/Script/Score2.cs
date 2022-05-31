@@ -4,13 +4,12 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class Score : MonoBehaviour
+public class Score2 : MonoBehaviour
 {
     public Text MyScoreText;
     public Text EndScoreGameOver;
     public Text EndScoreGameDone;
     private int scoreNum;
-    // public float endScore;
 
     public int health = 3;
     [SerializeField] GameObject gameOverMenu;
@@ -29,14 +28,14 @@ public class Score : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D trash)
     {
-        if (trash.tag == "Anorganic") //kondisi sampah sesuai
+        if (trash.tag == "Organic") //kondisi sampah sesuai
         {
             scoreNum++;
             trashAudio.Play();
             Destroy(trash.gameObject);
             MyScoreText.text = "Score : " + scoreNum;
         }
-        else if (trash.tag == "Organic") //kondisi sampah tidak sesuai
+        else if (trash.tag == "Anorganic") //kondisi sampah tidak sesuai
         {
             // scoreNum--;
             Destroy(trash.gameObject);
@@ -44,7 +43,7 @@ public class Score : MonoBehaviour
             healthBar[counter--].SetActive(false);
             // MyScoreText.text = "Score : " + scoreNum;
 
-        }else if (trash.tag == "Bonus" && (SceneManager.GetActiveScene().name == "Game2" || SceneManager.GetActiveScene().name == "Game4")) //Bonus
+        }else if (trash.tag == "Bonus" && (SceneManager.GetActiveScene().name == "Game2" || SceneManager.GetActiveScene().name == "Game4")) //bonus
         {
             // scoreNum--;
             scoreNum=scoreNum+10;
@@ -55,7 +54,6 @@ public class Score : MonoBehaviour
         }
         EndScoreGameDone.text = "Score : " + scoreNum;
         EndScoreGameOver.text = "Score : " + scoreNum;
-        
     }
 
     void Update(){

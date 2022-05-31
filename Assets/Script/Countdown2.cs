@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Countdown : MonoBehaviour
+public class Countdown2 : MonoBehaviour
 {
     public float timeStart = 10;
     public Text textBox;
     [SerializeField] GameObject gameDoneMenu;
     public bool gameDone = false;
-    public Score script;
+    // public Score script;
+    public Score2 script2;
     // Use this for initialization
     void Start()
     {
@@ -28,7 +29,7 @@ public class Countdown : MonoBehaviour
             gameDoneMenu.SetActive(true);
             Time.timeScale = 0f;
             // PlayerPrefs.SetFloat("highScore", script.scoreNum);
-        }else if (script.gameOver == true)
+        }else if (script2.gameOver == true)
         {
             Time.timeScale = 0f;
         }
