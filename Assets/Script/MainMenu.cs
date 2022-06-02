@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     [SerializeField] GameObject pauseMenu;
+    [SerializeField] GameObject mainUI;
 
     // Start is called before the first frame update
     public void ChangeScene(string sceneName)
@@ -43,6 +44,19 @@ public class MainMenu : MonoBehaviour
     public void NextLevel(string nextLevelScene){
         Time.timeScale = 1f;
         SceneManager.LoadScene(nextLevelScene);
+    }
+
+    public void ShowInfo(GameObject infoMenu)
+    {
+        mainUI.SetActive(false);
+        infoMenu.SetActive(true);
+        // Time.timeScale = 0f;
+    }
+    public void UnshowInfo(GameObject infoMenu)
+    {
+        infoMenu.SetActive(false);
+        mainUI.SetActive(true);
+        // Time.timeScale = 1f;
     }
 
 }
