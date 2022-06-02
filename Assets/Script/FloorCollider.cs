@@ -50,6 +50,12 @@ public class FloorCollider : MonoBehaviour
                 Destroy(trash.gameObject);
                 // MyScoreText.text = "Score : " + scoreNum;
 
+            } else if (trash.tag == "Bonus" && (SceneManager.GetActiveScene().name == "Game2" || SceneManager.GetActiveScene().name == "Game4")) //kondisi sampah tidak sesuai
+            {
+                // scoreNum--;
+                Destroy(trash.gameObject);
+                // MyScoreText.text = "Score : " + scoreNum;
+
             }
             // EndScore.text = "Score : " + scoreNum;
         }

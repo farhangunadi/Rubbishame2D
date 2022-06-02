@@ -20,6 +20,7 @@ public class Score2 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Time.timeScale = 1f;
         scoreNum = 0;
         MyScoreText.text = "Score : " + scoreNum;
         trashAudio = GetComponent<AudioSource>();
